@@ -33,7 +33,7 @@ export class Favorites {
   
       const githubUser = await GithubUser.search(cleanUserName);
 
-      if (!githubUser) {
+      if (!githubUser.login) {
         throw new Error('Usuário não encontrado');
       }
 
